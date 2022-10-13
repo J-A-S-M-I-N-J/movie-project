@@ -232,19 +232,22 @@ function getImage() {
 }
 
 function timeFunction() {
-    setTimeout(function () {}, 5000);
+    return new Promise((resolve) => {
+        setTimeout(resolve, 250);
+
+    })
+
 }
 const answerButtons = document.getElementsByClassName('btn');
 for (let answerButton of answerButtons) {
-    answerButton.addEventListener('click', function () {
+    answerButton.addEventListener('click', async function () {
         if (isCorrectAnswer(currentQuestion, answerButton.innerHTML)) {
-            answerButton.style.background = 'lightgreen';
+            answerButton.style.backgroundColor = 'lightgreen';
             correctAnswerHandler();
         } else {
-            answerButton.style.background = 'red';
+            answerButton.style.backgroundColor = 'red';
         }
-        timeFunction();
-        clearTimeout(timeFunction);
+        await timeFunction();
         getNextQuestion();
         showQuestion(currentQuestion);
         answerButton.style.backgroundColor = '';
