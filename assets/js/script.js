@@ -1,6 +1,7 @@
 // function to generate questions and load image // 
-
 // all the variables for questions and answeers // 
+
+startTimer(60, document.querySelector('#game-timer'));
 
 const myQuestions = [{
         question: "Blade, is also known as?", // 0 //
@@ -254,17 +255,31 @@ for (let answerButton of answerButtons) {
     })
 }
 
+function startTimer(duration, display) {
+    var timer = duration,
+        minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
 
+        display.textContent = minutes + ":" + seconds;
 
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
 
-// function for countdown timer - and give alert when time is up
 
 /*
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 
-function gameTimer()
 {
-  countDown=countDown-1;
+  counter=countDown-1;
   if (countDown <= 0)
   {
      clearInterval(counter);
@@ -275,7 +290,8 @@ function gameTimer()
  document.getElementById("game-timer").innerHTML=countDown + " secs"; 
 }
  
-*/
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
 
 // function for displaying results in the end // 
 
