@@ -255,53 +255,21 @@ for (let answerButton of answerButtons) {
     })
 }
 
-function startTimer(duration, display) {
-    var timer = duration,
-        minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
+function gameTimer () {
+    let timeLeft = 60;
+    let timer = setInterval(function() {
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            document.getElementById("game-timer").innerHTML = "Game Over!";
         }
-    }, 1000);
+    }
+function endQuiz () {
+    document.getElementById("game-timer").innerHTML = "Game Over!";
+    document.getElementById("game-score").innerHTML = "Your score is: " + score;
+    document.getElementById("game-question").innerHTML = "Refresh the page to play again!"; {}
+    if (currentQuestionIndex === myQuestions.length || timeLeft === 0) {
+        document.getElementById("game-timer").innerHTML = "Game Over!";
+        endQuiz();
+        displayScore();
+    }
 }
-
-
-/*
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
-
-{
-  counter=countDown-1;
-  if (countDown <= 0)
-  {
-     clearInterval(counter);
-     alert("GAME OVER!")
-     return;
-  }
-
- document.getElementById("game-timer").innerHTML=countDown + " secs"; 
-}
- 
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
-
-
-// function for displaying results in the end // 
-
-/*  pasted from love math
-
-function displayResult () {
-    let displayResult = parseInt(document.getElementById("game-score").innerText);
-    document.getElementById("game-score").innerText = ++oldScore
-
-    if (countDown <= 0)
-    alert("displayResult?")
-
-    */
