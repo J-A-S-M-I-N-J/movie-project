@@ -198,6 +198,7 @@ let currentQuestionIndex = 0;
 let correctAnswer = null;
 
 
+
 function showQuestion(question) {
     const questionText = document.getElementsByClassName('game-question')[0];
     const firstButton = document.getElementsByClassName('btn')[0];
@@ -224,98 +225,35 @@ function correctAnswerHandler() {
     console.log(oldScoreElement)
     oldScoreElement.innerHTML = +oldScoreElement.innerText + 1;
 }
-/* function correctAnswerHandler() {
-    let oldScore = +(document.getElementsByClassName("game-score").innerText);
-    document.getElementsByClassName("game-score").innerText = oldScore + 1; */
 
+function getImage() {
+    var img = document.createElement('img');
 
+}
+
+function timeFunction() {
+    setTimeout(function () {}, 5000);
+}
 const answerButtons = document.getElementsByClassName('btn');
 for (let answerButton of answerButtons) {
     answerButton.addEventListener('click', function () {
         if (isCorrectAnswer(currentQuestion, answerButton.innerHTML)) {
+            answerButton.style.background = 'lightgreen';
             correctAnswerHandler();
+        } else {
+            answerButton.style.background = 'red';
         }
+        timeFunction();
+        clearTimeout(timeFunction);
         getNextQuestion();
         showQuestion(currentQuestion);
+        answerButton.style.backgroundColor = '';
     })
 }
 
 
 
-// function to make buttons submit answers and fetch correct answer, give a green/red color and go to next question // 
 
-/* 
-
-function generateQuiz(questions, quizContainer, resultsContainer, buttons)
-
-function showQuestions(questions, quizContainer) {
-
-    document.getElementById("game-question").value = "";
-
-    function showQuestions(){
-        const output = []
-        const answers;
-
-        for(const i=0; i<questions.length; i++){
-            answers = [];
-
-            for(letter in questions[i].answers){
-
-                answers.push ?????
-
-
-            
-                output.push ?????
-
-                --------
-
-
-
-             if(userAnswer===questions[i].correctAnswer){
-			
-			numCorrect++;
-			
-			answerContainers[i].style.color = 'lightgreen';
-		}
-		else{
-			
-			answerContainers[i].style.color = 'red';
-		}
-	}
-    
-
-/* pasted from love math
-
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "submit") {
-                checkAnswer();
-            } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(gameType);
-            }
-        })
-    }
-
-    */
-
-/*  pasted from love math
-
-function checkAnswer() {
-
-    let userAnswer = parseInt(document.getElementById("answer-box").value);
-    let calculatedAnswer = calculateCorrectAnswer();
-    let isCorrect = userAnswer === calculatedAnswer[0];
-
-    if (isCorrect) {
-        MAKE THE BUTTON GO GREEN
-        addScore();
-    } else {
-        MAKE BUTTON GO RED
-    }
 
 // function for countdown timer - and give alert when time is up
 
@@ -334,17 +272,6 @@ function gameTimer()
  document.getElementById("game-timer").innerHTML=countDown + " secs"; 
 }
  
-*/
-
-// function for keeping score //  pasted from love math 
-
-/* 
-
-function addScore() {
-    let oldScore = parseInt(document.getElementById("game-score").innerText);
-    document.getElementById("game-score").innerText = ++oldScore;
-
-}
 */
 
 // function for displaying results in the end // 
