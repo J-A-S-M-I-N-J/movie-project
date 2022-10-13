@@ -1,7 +1,9 @@
 // function to generate questions and load image // 
 // all the variables for questions and answeers // 
 
+// make pop-up window when you load page and ask for name and email
 startTimer(60, document.querySelector('#game-timer'));
+
 
 const myQuestions = [{
         question: "Blade, is also known as?", // 0 //
@@ -199,7 +201,6 @@ let currentQuestionIndex = 0;
 let correctAnswer = null;
 
 
-
 function showQuestion(question) {
     const questionText = document.getElementsByClassName('game-question')[0];
     const firstButton = document.getElementsByClassName('btn')[0];
@@ -227,11 +228,6 @@ function correctAnswerHandler() {
     oldScoreElement.innerHTML = +oldScoreElement.innerText + 1;
 }
 
-function getImage() {
-    var img = document.createElement('img');
-
-}
-
 function timeFunction() {
     return new Promise((resolve) => {
         setTimeout(resolve, 250);
@@ -255,21 +251,49 @@ for (let answerButton of answerButtons) {
     })
 }
 
-function gameTimer () {
-    let timeLeft = 60;
-    let timer = setInterval(function() {
-        if (timeLeft <= 0) {
-            clearInterval(timer);
-            document.getElementById("game-timer").innerHTML = "Game Over!";
-        }
-    }
-function endQuiz () {
-    document.getElementById("game-timer").innerHTML = "Game Over!";
-    document.getElementById("game-score").innerHTML = "Your score is: " + score;
-    document.getElementById("game-question").innerHTML = "Refresh the page to play again!"; {}
-    if (currentQuestionIndex === myQuestions.length || timeLeft === 0) {
-        document.getElementById("game-timer").innerHTML = "Game Over!";
-        endQuiz();
-        displayScore();
-    }
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+            alert("Game Over! Your score is " + document.getElementById("game-score").innerText);
+        }   
+    }, 1000);
 }
+               
+
+
+
+/*function setTimeout() {
+    setTimeout(() => {
+        alert("Game Over! Your score is " + document.getElementById("game-score").innerText);
+    }, timeout);
+}
+
+
+
+
+        
+
+/*window.onload = function () {
+    var OneMinutes = 60 * 1,
+        display = document.querySelector('game-timer');
+    startTimer(OneMinutes, display);
+}; */   
+
+// when game-timer is 0, send score to e-mail
+/* function sendScore() {
+    var score = document.getElementById("game-score").innerHTML;
+    window.location.href = "mailto:
+}
+*/
+
