@@ -193,6 +193,55 @@ const myQuestions = [{
     },
 ];
 
+let currentQuestion = myQuestions[0];
+let currentQuestionIndex = 0;
+let correctAnswer = null;
+
+
+function showQuestion(question) {
+    const questionText = document.getElementsByClassName('game-question')[0];
+    const firstButton = document.getElementsByClassName('btn')[0];
+    const secondButton = document.getElementsByClassName('btn')[1];
+    const thirdButton = document.getElementsByClassName('btn')[2];
+    questionText.innerText = question.question;
+    firstButton.innerText = question.answers.a;
+    secondButton.innerText = question.answers.b;
+    thirdButton.innerText = question.answers.c;
+}
+
+function getNextQuestion() {
+    currentQuestionIndex = currentQuestionIndex + 1;
+    currentQuestion = myQuestions[currentQuestionIndex];
+
+}
+
+function isCorrectAnswer(question, answer) {
+    return (question.answers[question.correctAnswer] === answer);
+}
+
+function correctAnswerHandler() {
+    const oldScoreElement = document.getElementById("game-score");
+    console.log(oldScoreElement)
+    oldScoreElement.innerHTML = +oldScoreElement.innerText + 1;
+}
+/* function correctAnswerHandler() {
+    let oldScore = +(document.getElementsByClassName("game-score").innerText);
+    document.getElementsByClassName("game-score").innerText = oldScore + 1; */
+
+
+const answerButtons = document.getElementsByClassName('btn');
+for (let answerButton of answerButtons) {
+    answerButton.addEventListener('click', function () {
+        if (isCorrectAnswer(currentQuestion, answerButton.innerHTML)) {
+            correctAnswerHandler();
+        }
+        getNextQuestion();
+        showQuestion(currentQuestion);
+    })
+}
+
+
+
 // function to make buttons submit answers and fetch correct answer, give a green/red color and go to next question // 
 
 /* 

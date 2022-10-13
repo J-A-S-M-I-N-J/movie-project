@@ -69,9 +69,7 @@ h1 {
 
 }
 
-.btn-1,
-.btn-2,
-.btn-3 {
+.btn {
     height: 65px;
     width: 140px;
 }
@@ -99,15 +97,13 @@ footer {
         width: 87.5%;
     }
 
-    .btn-1,
-    .btn-2,
-    .btn-3 {
+    .btn {
         height: 30px;
         width: 110px;
         font-size: 9px;
     }
 
-    .btn-2 {
+    .buttonstyling-2 {
         margin-left: 6px;
         margin-right: 6px;
 
@@ -121,9 +117,7 @@ footer {
         width: 90%;
     }
 
-    .btn-1,
-    .btn-2,
-    .btn-3 {
+    .buttonstyling-2 {
         height: 45px;
         width: 120px;
         font-size: 11px;
