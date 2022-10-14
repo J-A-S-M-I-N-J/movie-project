@@ -195,8 +195,8 @@ const myQuestions = [{
         correctAnswer: "c",
         image: "../assets/images/img-question-18.jpeg",
     },
-    {
-        question: "Bill Murray stars in the classic movie Groundhog day - Do you remember what day he always seems to repeat?", // 19 //
+    { 
+        question: "Bill Murray stars in the classic movie Groundhog day. Do you remember what day he always seems to repeat?", // 19 //
         answers: {
             a: "Wednesday",
             b: "Monday",
@@ -288,6 +288,7 @@ for (let answerButton of answerButtons) {
         getNextQuestion();
         showQuestion(currentQuestion);
         answerButton.style.backgroundColor = '';
+        showPopup();
     })
 }
 
@@ -305,15 +306,21 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = duration;
-            alert("Game Over! Your score is " + document.getElementById("game-score").innerText);
         }   
     }, 1000);
 }
-               
-// when game-timer is 0, send score to e-mail
+
+function showPopup() {
+    const popupElement = document.getElementById('popup');
+        if (currentQuestionIndex === myQuestions.length - 1 || timer < 1) {
+          popupElement.style.display = "block"
+    }
+
+
+
 /* function sendScore() {
     var score = document.getElementById("game-score").innerHTML;
     window.location.href = "mailto:
 }
 */
-
+}
