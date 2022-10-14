@@ -12,7 +12,8 @@ const myQuestions = [{
             b: "The Nightslayer",
             c: "The Vampire Hunter"
         },
-        correctAnswer: "a"
+        correctAnswer: "a",
+        image: "../assets/images/img-question-0.jpeg",
     },
     {
         question: "How many rings of power were made for the Elves in LOTR?", // 1 //
@@ -21,7 +22,8 @@ const myQuestions = [{
             b: "Seven",
             c: "Nine"
         },
-        correctAnswer: "a"
+        correctAnswer: "a",
+        image: "../assets/images/img-question-1.jpeg",
     },
     {
         question: "Which 1976 movie with Robert DeNiro has the iconic 'You talkin to me?' line?", // 2 //
@@ -30,7 +32,8 @@ const myQuestions = [{
             b: "A Bronx Tale",
             c: "Taxi Driver"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        image: "../assets/images/img-question-2.jpeg",
     },
     {
         question: "Three Billboards Outside Ebbing, Missouri won how many Oscars in 2017?", // 3 //
@@ -39,7 +42,8 @@ const myQuestions = [{
             b: "2",
             c: "3"
         },
-        correctAnswer: "b"
+        correctAnswer: "b",
+        image: "../assets/images/img-question-3.jpeg",
     },
     {
         question: "What famous beach does White Man Cant Jump play out in?", // 4 //
@@ -48,7 +52,8 @@ const myQuestions = [{
             b: "Venice Beach",
             c: "Miami Beach"
         },
-        correctAnswer: "b"
+        correctAnswer: "b",
+        image: "../assets/images/img-question-4.jpeg",
     },
     {
         question: "The movie Green Book is based on a travel guide for African Americans during the 1900's - how many states does it cover?", // 5 //
@@ -57,7 +62,8 @@ const myQuestions = [{
             b: "50",
             c: "45"
         },
-        correctAnswer: "b"
+        correctAnswer: "b",
+        image: "../assets/images/img-question-5.jpeg",
     },
     {
         question: "Who wrote and directed the horror/thriller-movie: Get Out?", // 6 //
@@ -66,7 +72,8 @@ const myQuestions = [{
             b: "Jordan Poole",
             c: "Tyler Perry"
         },
-        correctAnswer: "a"
+        correctAnswer: "a",
+        image: "../assets/images/img-question-6.jpeg",
     },
     {
         question: "The Big Lebowski, also known as:", // 7 //
@@ -75,7 +82,8 @@ const myQuestions = [{
             b: "The Bro",
             c: "The Dude"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        image: "../assets/images/img-question-7.jpeg",
     },
     {
         question: "Based on a Victor Hugo novel, this movie with Sasha Baron Cohen, Russell Crowe and Hugh Jackman is called what?", // 8 //
@@ -84,7 +92,8 @@ const myQuestions = [{
             b: "The Ringer of Notre Dame",
             c: "Around The World in 80 Days"
         },
-        correctAnswer: "a"
+        correctAnswer: "a",
+        image: "../assets/images/img-question-8.jpeg",
     },
     {
         question: "What's the name of this figure?", // 9 //
@@ -93,7 +102,8 @@ const myQuestions = [{
             b: "Mononoke",
             c: "Totoro"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        image: "../assets/images/img-question-9.jpeg",
     },
     {
         question: "A Royale with Cheese, is what?", // 10 //
@@ -102,7 +112,8 @@ const myQuestions = [{
             b: "A fancy Cheeseburger",
             c: "A Quarter Pounder with Cheese"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        image: "../assets/images/img-question-10.jpeg",
     },
     {
         question: "Finish the sentence: WHATS IN THE ?", // 11 //
@@ -111,7 +122,8 @@ const myQuestions = [{
             b: "CAR",
             c: "SAUCE"
         },
-        correctAnswer: "a"
+        correctAnswer: "a",
+        image: "../assets/images/img-question-11.jpeg",
     },
     {
         question: "In 'The Pursuit of Happyness' Will Smiths character gets 'X-mas gift of the year' What is it?", // 12 //
@@ -120,7 +132,8 @@ const myQuestions = [{
             b: "A CD-Player",
             c: "A Rubik's Cube"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        image: "../assets/images/img-question-12.jpeg",
     },
     {
         question: "Who directed Pan's Labyrinth?", // 13 //
@@ -129,7 +142,8 @@ const myQuestions = [{
             b: "Guillermo Del Toro",
             c: "Benicio Del Toro"
         },
-        correctAnswer: "b"
+        correctAnswer: "b",
+        image: "../assets/images/img-question-13.jpeg",
     },
     {
         question: "Who made the voice for the genie in the original Disney movie Aladdin?", // 14 //
@@ -138,7 +152,8 @@ const myQuestions = [{
             b: "Robin Williams",
             c: "William Roberts"
         },
-        correctAnswer: "b"
+        correctAnswer: "b",
+        image: "../assets/images/img-question-14.jpeg",
     },
     {
         question: "Who plays the young goth girl in the movie Beetlejuice from 1988?", // 15 //
@@ -147,7 +162,8 @@ const myQuestions = [{
             b: "Kiera Knightley",
             c: "Winona Ryder"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        image: "../assets/images/img-question-15.jpeg",
     },
     {
         question: "What's the name of the evil sorceress in the West African-animation Kirikou?", // 16 //
@@ -156,7 +172,8 @@ const myQuestions = [{
             b: "Agraba",
             c: "Karaba"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        image: "../assets/images/img-question-16.jpeg",
     },
     {
         question: "In Coming to America, what was Prince Hakeem's home country/land called?", // 17 //
@@ -165,7 +182,8 @@ const myQuestions = [{
             b: "Zamunda",
             c: "Atlanta"
         },
-        correctAnswer: "b"
+        correctAnswer: "b",
+        image: "../assets/images/img-question-17.jpeg",
     },
     {
         question: "Michael J Fox plays con-artist that can see and speak to the dead and is haunted by the grim reaper.", // 18 //
@@ -174,7 +192,8 @@ const myQuestions = [{
             b: "The Haunted",
             c: "The Frighteners"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        image: "../assets/images/img-question-18.jpeg",
     },
     {
         question: "Bill Murray stars in the classic movie Groundhog day - Do you remember what day he always seems to repeat?", // 19 //
@@ -183,7 +202,8 @@ const myQuestions = [{
             b: "Monday",
             c: "Friday"
         },
-        correctAnswer: "b"
+        correctAnswer: "b",
+        image: "../assets/images/img-question-19.jpeg",
     },
     {
         question: "What position did Harry Potter play at Quidditch?", // 20 //
@@ -192,7 +212,8 @@ const myQuestions = [{
             b: "Striker",
             c: "Searcher"
         },
-        correctAnswer: "a"
+        correctAnswer: "a",
+        image: "../assets/images/img-question-20.jpeg",
     },
 ];
 
@@ -200,24 +221,32 @@ let currentQuestion = myQuestions[0];
 let currentQuestionIndex = 0;
 let correctAnswer = null;
 
+/*
+let img = document.getElementByClassName("img");
+img.alt = "quiz images related to the questions";
+img.style.width = "100%";
+img.style.height = "500px"; */
+
 
 function showQuestion(question) {
     const questionText = document.getElementsByClassName('game-question')[0];
     const firstButton = document.getElementsByClassName('btn')[0];
     const secondButton = document.getElementsByClassName('btn')[1];
     const thirdButton = document.getElementsByClassName('btn')[2];
+    const gameImage =  document.getElementsByClassName("game-images")[0];
     questionText.innerText = question.question;
     firstButton.innerText = question.answers.a;
     secondButton.innerText = question.answers.b;
     thirdButton.innerText = question.answers.c;
+    gameImage.src = question.image;
+
 }
 
 function getNextQuestion() {
     currentQuestionIndex = currentQuestionIndex + 1;
-    currentQuestion = myQuestions[currentQuestionIndex];
-
+    currentQuestion = myQuestions[currentQuestionIndex]; 
+    
 }
-
 function isCorrectAnswer(question, answer) {
     return (question.answers[question.correctAnswer] === answer);
 }
@@ -270,26 +299,6 @@ function startTimer(duration, display) {
     }, 1000);
 }
                
-
-
-
-/*function setTimeout() {
-    setTimeout(() => {
-        alert("Game Over! Your score is " + document.getElementById("game-score").innerText);
-    }, timeout);
-}
-
-
-
-
-        
-
-/*window.onload = function () {
-    var OneMinutes = 60 * 1,
-        display = document.querySelector('game-timer');
-    startTimer(OneMinutes, display);
-}; */   
-
 // when game-timer is 0, send score to e-mail
 /* function sendScore() {
     var score = document.getElementById("game-score").innerHTML;
