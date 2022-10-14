@@ -4,7 +4,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
 }
 
 * {
@@ -34,22 +33,46 @@ body {
     margin-left: auto;
     margin-right: auto;
 
-
 }
 
 img {
-    margin-top: 20px;
-    width: 100%;
-    max-height: 500px;
+    margin-top:40px;
     display: flex;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    width: 560px;
+    height: 380px;
+}
 
+.img-area {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 560px;
+    height: 380px;
+    background-color: #020101;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 .game-question {
 
     margin-top: 40px;
-    display: flex;
-    justify-content: center;
+    text-align:center;
+    width: 500px;
+    word-wrap: break-word;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: #DCDCDC;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
@@ -66,17 +89,25 @@ h1 {
     padding-right: 50px;
     padding-left: 50px;
     margin-bottom: 20px;
-    transition: background-color 400ms ease;
-
 }
 
 .btn {
     height: 65px;
     width: 140px;
+    box-shadow: 0 0 0 2px #DCDCDC;
+    border-radius: 10px;
+    background-color: #DCDCDC;
 }
 
-
-.game-tracking-area {
+.dynamic-tracking-objects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.static-tracking-objects {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -92,6 +123,47 @@ footer {
     color: white;
     height: 30px;
 }
+
+#game-timer {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #DCDCDC;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#game-score {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #DCDCDC;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#timer-text {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #DCDCDC;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#score-text {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #DCDCDC;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
 
 @media only screen and (min-width: 320px) and (max-width: 520px) {
     .full-game-area {
@@ -124,3 +196,4 @@ footer {
         font-size: 11px;
     }
 }
+

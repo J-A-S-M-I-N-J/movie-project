@@ -215,6 +215,17 @@ const myQuestions = [{
         correctAnswer: "a",
         image: "../assets/images/img-question-20.jpeg",
     },
+    {
+    question: "GAME OVER", // 21 //
+    answers: {
+        a: "Seeker",
+        b: "Striker",
+        c: "Searcher"
+    },
+    correctAnswer: "a",
+    image: "../assets/images/img-question-21.jpeg",
+},
+
 ];
 
 let currentQuestion = myQuestions[0];
