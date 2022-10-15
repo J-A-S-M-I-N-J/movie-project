@@ -309,8 +309,6 @@ function showPopup() {
     if (currentQuestionIndex === myQuestions.length - 1 || timer < 1) {
         popupElement.style.display = "block"
         finalScore.innerText = document.getElementById("game-score").innerText;
-
-
     }
 }
 
@@ -327,6 +325,7 @@ function sendEmail() {
             To: " Hi, thank you for playing " + playerName + " your score is " + finalScore,
         }).then(function () {
             alert("Thank you for submitting your score")
+            location.reload();
         }, function (error) {
             console.log('FAILED...', error);
         });
