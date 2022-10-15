@@ -7,7 +7,7 @@ const myQuestions = [{
         answers: {
             a: "The Daywalker",
             b: "The Nightslayer",
-            c: "The Vampire Hunter"
+            c: "The Vampire-Hunter"
         },
         correctAnswer: "a",
         image: "../assets/images/img-question-0.jpeg",
@@ -192,7 +192,7 @@ const myQuestions = [{
         correctAnswer: "c",
         image: "../assets/images/img-question-18.jpeg",
     },
-    { 
+    {
         question: "Bill Murray stars in the classic movie Groundhog day. Do you remember what day he always seems to repeat?", // 19 //
         answers: {
             a: "Wednesday",
@@ -213,29 +213,30 @@ const myQuestions = [{
         image: "../assets/images/img-question-20.jpeg",
     },
     {
-    question: "GAME OVER", // 21 //
-    answers: {
-        a: "Seeker",
-        b: "Striker",
-        c: "Searcher"
+        question: "GAME OVER", // 21 //
+        answers: {
+            a: "Seeker",
+            b: "Striker",
+            c: "Searcher"
+        },
+        correctAnswer: "a",
+        image: "../assets/images/img-question-21.jpeg",
     },
-    correctAnswer: "a",
-    image: "../assets/images/img-question-21.jpeg",
-},
-
 ];
+
+document.getElementById('submit').addEventListener('click', sendEmail);
 
 let currentQuestion = myQuestions[0];
 let currentQuestionIndex = 0;
 let correctAnswer = null;
-
+var timer = null;
 
 function showQuestion(question) {
     const questionText = document.getElementsByClassName('game-question')[0];
     const firstButton = document.getElementsByClassName('btn')[0];
     const secondButton = document.getElementsByClassName('btn')[1];
     const thirdButton = document.getElementsByClassName('btn')[2];
-    const gameImage =  document.getElementsByClassName("game-images")[0];
+    const gameImage = document.getElementsByClassName("game-images")[0];
     questionText.innerText = question.question;
     firstButton.innerText = question.answers.a;
     secondButton.innerText = question.answers.b;
@@ -246,9 +247,10 @@ function showQuestion(question) {
 
 function getNextQuestion() {
     currentQuestionIndex = currentQuestionIndex + 1;
-    currentQuestion = myQuestions[currentQuestionIndex]; 
-    
+    currentQuestion = myQuestions[currentQuestionIndex];
+
 }
+
 function isCorrectAnswer(question, answer) {
     return (question.answers[question.correctAnswer] === answer);
 }
@@ -280,12 +282,11 @@ for (let answerButton of answerButtons) {
         showQuestion(currentQuestion);
         answerButton.style.backgroundColor = '';
         showPopup();
-        sendEmail();
     })
 }
 
 function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
+    timer = duration;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
@@ -298,36 +299,38 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = duration;
-        }   
+        }
     }, 1000);
 }
 
 function showPopup() {
     const popupElement = document.getElementById('popup');
     const finalScore = document.getElementById('final-score');
-        if (currentQuestionIndex === myQuestions.length - 1 || timer < 1) {
-          popupElement.style.display = "block"
-            finalScore.innerText = document.getElementById("game-score").innerText;
+    if (currentQuestionIndex === myQuestions.length - 1 || timer < 1) {
+        popupElement.style.display = "block"
+        finalScore.innerText = document.getElementById("game-score").innerText;
 
 
     }
 }
 
-/* let finalScore = document.getElementById("game-score").innerText;
-let emailAdress = document.getElementById("email-adress").value;
-let playerName = document.getElementById("player-name").value; */
-
 function sendEmail() {
     const finalScore = document.getElementById("game-score").innerText;
     const emailAdress = document.getElementById("email-adress").value;
-    const playerName = document.getElementById("player-name").value;
-      Email.send({
-        Host: "smtp.gmail.com",
-        To: emailAdress,
-        From: emailAdress,
-        Subject: playerName + "Your score is: " + finalScore,
-        Body: "Hi, thank you for playing " + playerName + " your score is " + finalScore,
-    }).then(
-        alert("Thank you for submitting your score")
-    );
+    const playerName = document.getElementById("playerName").value;
+    if (emailAdress !== "" & playerName !== "") {
+        emailjs.send("service_qkue0kz", "template_rixgjxw", {
+            Subject: emailAdress,
+            playerName: playerName,
+            Body: playerName + " Your score is: " + finalScore,
+            From: "Jasmin",
+            To: " Hi, thank you for playing " + playerName + " your score is " + finalScore,
+        }).then(function () {
+            alert("Thank you for submitting your score")
+        }, function (error) {
+            console.log('FAILED...', error);
+        });
+    } else {
+        alert("Please fill in the form!");
+    }
 }
