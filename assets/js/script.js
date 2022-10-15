@@ -2,7 +2,7 @@
 The code below will start the timer
 and count down towards 0.
 */
-
+// Tried to configure several different timers, to fit my functions, this was the one that worked. More in README.
 function startTimer(duration, display) {
     timer = duration;
     setInterval(function () {
@@ -22,12 +22,14 @@ function startTimer(duration, display) {
 }
 
 // Loads an alert that stops timer and gives user time to read rules and press ok when ready
+// window.onload was found on Stackoverflow. More in README.
 window.onload = function(){ 
-    alert("Ready to play? Read the rules at the bottom - timer begins when you press Ok!");
+    alert("Ready to play? Read the rules at the bottom - timer begins when you press Ok! If rules don't load automaticly, press ok, read and then refresh the page for new timer. No cheating!");
     startTimer(60, document.querySelector('#game-timer'));
     }
 
-// All of the questions and answers for the quiz 
+// All of the questions and answers for the quiz.
+// Found a nice template for the questions and answers on the web. More in README.
 const myQuestions = [{
         question: "Blade, is also known as?", // 0 //
         answers: {
@@ -286,12 +288,14 @@ function isCorrectAnswer(question, answer) {
     return (question.answers[question.correctAnswer] === answer);
 }
 // This code handles the correct answers and keeps the score.
+// Finding correct answer and keeping score was inspired by the  Love Maths project.
 function correctAnswerHandler() {
     const oldScoreElement = document.getElementById("game-score");
     console.log(oldScoreElement)
     oldScoreElement.innerHTML = +oldScoreElement.innerText + 1;
 }
 // This function is used to give a small delay after you click the answer buttons in order to reset their colors after R/W answers.
+// Using Promise((resolve)) and the async function. More in README
 function timeFunction() {
     return new Promise((resolve) => {
         setTimeout(resolve, 250);
@@ -342,6 +346,7 @@ If they fill out the form correctly and click submit it will send an email to th
 This will trigger an alert with a message, and if you click ok, it will reload the page.
 That lets you play the game again. 
 If form isn't filled out correctly it will trigger an alert with a message.
+The tempalte and method was recommended by my mentor. 
 */
 function sendEmail() {
     const finalScore = document.getElementById("game-score").innerText;
@@ -349,10 +354,10 @@ function sendEmail() {
     const playerName = document.getElementById("playerName").value;
     if (emailAdress !== "" & playerName !== "") {
         emailjs.send("service_qkue0kz", "template_rixgjxw", {
-            Subject: emailAdress,
+            Subject: "Your score from the movie quiz",
             playerName: playerName,
-            Body: playerName + " Your score is: " + finalScore,
-            From: "Jasmin",
+            Body: " Your score was: " + finalScore,
+            From: "Game Master Jazz",
             To: " Hi, thank you for playing " + playerName + " your score is " + finalScore,
         }).then(function () {
             alert("Thank you for submitting your score")
