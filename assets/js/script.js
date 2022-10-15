@@ -1,5 +1,25 @@
+function startTimer(duration, display) {
+    timer = duration;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
 
-startTimer(60, document.querySelector('#game-timer'));
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function(){ 
+    alert("Ready to play? Read the rules at the bottom - timer begins when you press Ok!");
+    startTimer(60, document.querySelector('#game-timer'));
+    }
 
 
 const myQuestions = [{
@@ -285,24 +305,6 @@ for (let answerButton of answerButtons) {
     })
 }
 
-function startTimer(duration, display) {
-    timer = duration;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
-
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
-
 function showPopup() {
     const popupElement = document.getElementById('popup');
     const finalScore = document.getElementById('final-score');
@@ -333,3 +335,4 @@ function sendEmail() {
         alert("Please fill in the form!");
     }
 }
+
