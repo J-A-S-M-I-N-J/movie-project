@@ -232,12 +232,6 @@ let currentQuestion = myQuestions[0];
 let currentQuestionIndex = 0;
 let correctAnswer = null;
 
-/*
-let img = document.getElementByClassName("img");
-img.alt = "quiz images related to the questions";
-img.style.width = "100%";
-img.style.height = "500px"; */
-
 
 function showQuestion(question) {
     const questionText = document.getElementsByClassName('game-question')[0];
@@ -310,17 +304,23 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
+let finalScore = document.getElementById("game-score").innerText;
+
 function showPopup() {
     const popupElement = document.getElementById('popup');
+    const finalScore = document.getElementById('final-score');
         if (currentQuestionIndex === myQuestions.length - 1 || timer < 1) {
           popupElement.style.display = "block"
+            finalScore.innerText = document.getElementById("game-score").innerText;
+
+
     }
 
-
-
-/* function sendScore() {
-    var score = document.getElementById("game-score").innerHTML;
-    window.location.href = "mailto:
+function submitScore() {
+    const finalScore = document.getElementById("game-score").innerText;
+    const email = document.getElementById("email").value;
+    const emailSubject = "Your score is " + finalScore;
+    const bodyText = "Your score is " + finalScore;
+    const emailLink = "mailto:" + email + "?subject=" + emailSubject + "&body=" + bodyText;
 }
-*/
 }
