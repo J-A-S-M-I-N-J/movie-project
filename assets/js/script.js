@@ -1,3 +1,8 @@
+/*
+The code below will start the timer
+and count down towards 0.
+*/
+
 function startTimer(duration, display) {
     timer = duration;
     setInterval(function () {
@@ -16,12 +21,13 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
+// Loads an alert that stops timer and gives user time to read rules and press ok when ready
 window.onload = function(){ 
     alert("Ready to play? Read the rules at the bottom - timer begins when you press Ok!");
     startTimer(60, document.querySelector('#game-timer'));
     }
 
-
+// All of the questions and answers for the quiz 
 const myQuestions = [{
         question: "Blade, is also known as?", // 0 //
         answers: {
@@ -244,6 +250,7 @@ const myQuestions = [{
     },
 ];
 
+// Event listener for the submit button in the popup at the end of the game
 document.getElementById('submit').addEventListener('click', sendEmail);
 
 let currentQuestion = myQuestions[0];
@@ -251,6 +258,11 @@ let currentQuestionIndex = 0;
 let correctAnswer = null;
 var timer = null;
 
+/*
+The code below makes it so the game starts at the first item in the array
+loads images and questions
+and makes the buttons fetch the answers.
+*/
 function showQuestion(question) {
     const questionText = document.getElementsByClassName('game-question')[0];
     const firstButton = document.getElementsByClassName('btn')[0];
@@ -264,30 +276,37 @@ function showQuestion(question) {
     gameImage.src = question.image;
 
 }
-
+// This function works together with above to get the next question. 
 function getNextQuestion() {
     currentQuestionIndex = currentQuestionIndex + 1;
     currentQuestion = myQuestions[currentQuestionIndex];
-
 }
-
+// This function figures out the correct answer.
 function isCorrectAnswer(question, answer) {
     return (question.answers[question.correctAnswer] === answer);
 }
-
+// This code handles the correct answers and keeps the score.
 function correctAnswerHandler() {
     const oldScoreElement = document.getElementById("game-score");
     console.log(oldScoreElement)
     oldScoreElement.innerHTML = +oldScoreElement.innerText + 1;
 }
-
+// This function is used to give a small delay after you click the answer buttons in order to reset their colors after R/W answers.
 function timeFunction() {
     return new Promise((resolve) => {
         setTimeout(resolve, 250);
 
-    })
-
+    });
 }
+/*
+The code below is an event listener for the buttons
+It checks if the answer is correct or not and colors the buttons accordingly.
+It then resets the buttons to their original color after a short delay.
+So that the color doesn't stay after the next question.
+But also so users get to see it for a short time.
+The event listener is also used to trigger a popup if players have answered all questions
+Before the time runs out. 
+*/
 const answerButtons = document.getElementsByClassName('btn');
 for (let answerButton of answerButtons) {
     answerButton.addEventListener('click', async function () {
@@ -304,7 +323,11 @@ for (let answerButton of answerButtons) {
         showPopup();
     })
 }
-
+/*
+The popup fetches the final score and displays it in a window.
+It triggers on the last question in the array.
+Or when the timer runs out.
+*/
 function showPopup() {
     const popupElement = document.getElementById('popup');
     const finalScore = document.getElementById('final-score');
@@ -313,7 +336,13 @@ function showPopup() {
         finalScore.innerText = document.getElementById("game-score").innerText;
     }
 }
-
+/*
+The code below will then ask for the users name and email.
+If they fill out the form correctly and click submit it will send an email to the user with their score.
+This will trigger an alert with a message, and if you click ok, it will reload the page.
+That lets you play the game again. 
+If form isn't filled out correctly it will trigger an alert with a message.
+*/
 function sendEmail() {
     const finalScore = document.getElementById("game-score").innerText;
     const emailAdress = document.getElementById("email-adress").value;

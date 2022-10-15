@@ -15,43 +15,52 @@
 
 <body>
     <header id="header" class="heading">Coolest Movie-Quiz Ever</h1></header>
+   <!--  The whole game area that includes all relevant elements to the game   -->
     <div class="full-game-area">
+        <!--  This is where the questions are generated   -->
         <div class="question-area">
             <div class="game-question">Blade, also known as?</div>
         </div>
-
+        <!--  An image that will load for each question     -->
         <div class="image-area">
             <img class="game-images" src="../assets/images/img-question-0.jpeg" alt="1 of 20 quiz images related to quiz-question">
         </div>
+        <!--  The game buttons that make the game advance forward    -->
         <div class="game-buttons">
             <!-- from left to right-->
             <button data-type="game-button-1" class="btn">The Daywalker</button>
             <button data-type="game-button-2" class="btn buttonstyling-2">The Nightslayer</button>
             <button data-type="game-button-3" class="btn">The Vampire Hunter</button>
         </div>
+        <!--  The game timer that will count down from 60 seconds and also the score-tracker   -->
         <div class="dynamic-tracking-objects">
             <div id="game-timer">00:00</div>
             <div id="game-score">0</div>
         </div>
+        <!--  Static text that gives ^ above more context for players     -->
         <div class="static-tracking-objects">
             <div id="timer-text">Time Left</div>
             <div id="score-text">Score</div>
         </div>
     </div>
+    <!--  The end-of-game popup that has a form built in    -->
     <div id="popup">
         <form action="" id="form" method="post" name="form">
             <h2>Submit Your Score!</h2>
             <hr>
+            <!--  Shows the players final score      -->
             <div id="final-score-text">Final Score</div>
             <div id="final-score">
                 <p>0</p>
             </div>
+            <!--  Name and Email Field + Submit button      -->
             <input id="playerName" name="player-name" placeholder="Name" type="text" />
             <br>
             <input id="email-adress" name="email-adress" placeholder="Email" type="text" />
             <button class="submit-button" id="submit" type="button">Submit</button>
         </form>
     </div>
+    <!--  These elements explain the game rules     -->
         <div id="game-rules-header"><h4>Game Rules</h4></div>
         <div id="game-rules">
             <p> You have 60 seconds to answer as many questions as possible.</p>
@@ -59,7 +68,7 @@
             <p> Wrong answers award no points and no deduction.</p>
             <p> You can only answer each question once.</p>
         </div>
-
+<!--  Footer      -->
     <footer class="page-footer">@the photos on this page are stock/images licensed for creative use.</footer>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
