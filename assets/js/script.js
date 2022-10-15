@@ -1,7 +1,4 @@
-// function to generate questions and load image // 
-// all the variables for questions and answeers // 
 
-// make pop-up window when you load page and ask for name and email
 startTimer(60, document.querySelector('#game-timer'));
 
 
@@ -283,6 +280,7 @@ for (let answerButton of answerButtons) {
         showQuestion(currentQuestion);
         answerButton.style.backgroundColor = '';
         showPopup();
+        sendEmail();
     })
 }
 
@@ -304,8 +302,6 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
-let finalScore = document.getElementById("game-score").innerText;
-
 function showPopup() {
     const popupElement = document.getElementById('popup');
     const finalScore = document.getElementById('final-score');
@@ -315,12 +311,23 @@ function showPopup() {
 
 
     }
-
-function submitScore() {
-    const finalScore = document.getElementById("game-score").innerText;
-    const email = document.getElementById("email").value;
-    const emailSubject = "Your score is " + finalScore;
-    const bodyText = "Your score is " + finalScore;
-    const emailLink = "mailto:" + email + "?subject=" + emailSubject + "&body=" + bodyText;
 }
+
+/* let finalScore = document.getElementById("game-score").innerText;
+let emailAdress = document.getElementById("email-adress").value;
+let playerName = document.getElementById("player-name").value; */
+
+function sendEmail() {
+    const finalScore = document.getElementById("game-score").innerText;
+    const emailAdress = document.getElementById("email-adress").value;
+    const playerName = document.getElementById("player-name").value;
+      Email.send({
+        Host: "smtp.gmail.com",
+        To: emailAdress,
+        From: emailAdress,
+        Subject: playerName + "Your score is: " + finalScore,
+        Body: "Hi, thank you for playing " + playerName + " your score is " + finalScore,
+    }).then(
+        alert("Thank you for submitting your score")
+    );
 }
