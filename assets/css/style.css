@@ -35,7 +35,7 @@ img {
 .heading {
     font-size: 1.25rem;
     text-align:center;
-    padding-top:7.5px;
+    
 }
 /*   Makes so that game-area stays centered    */
 .full-game-area {
@@ -236,7 +236,7 @@ form {
 }
 /*  Header for the rules at the bottom             */
 #game-rules-header {
-    margin-top: 5px;
+    margin-top: 15px;
     text-align: center;
     font-size: 18px;
 }
@@ -248,7 +248,7 @@ form {
 }
 
 h4 {
-    margin-top:5px;
+    margin-top:15px;
     margin-bottom:5px;
 }
 /*   Style for submit button, has a border, cursor animation, removes text-deco from being a link            */
@@ -342,7 +342,7 @@ h4 {
     .static-tracking-objects {
         justify-content: space-around;
         margin-top: 2px;
-        margin: bottom 10px;
+        margin-bottom: 10px;
 
 
     }
@@ -374,7 +374,6 @@ h4 {
         top:30%;
     }
     footer {
-        margin-bottom:px;
         font-size:11px;
     }
     #submit {
@@ -426,7 +425,7 @@ h4 {
     .static-tracking-objects {
             justify-content: space-around;
             margin-top: 2px;
-            margin: bottom 10px;
+            margin-bottom: 5px;
     }
 
     .dynamic-tracking-objects {

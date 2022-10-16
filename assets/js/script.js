@@ -6,7 +6,7 @@ and count down towards 0.
 function startTimer(duration, display) {
     timer = duration;
     setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
+        minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
 
@@ -26,7 +26,7 @@ function startTimer(duration, display) {
 window.onload = function(){ 
     alert("Ready to play? Read the rules at the bottom - timer begins when you press Ok! If rules don't load automaticly, press ok, read and then refresh the page for new timer. No cheating!");
     startTimer(60, document.querySelector('#game-timer'));
-    }
+    };
 
 // All of the questions and answers for the quiz.
 // Found a nice template for the questions and answers on the web. More in README.
@@ -291,7 +291,7 @@ function isCorrectAnswer(question, answer) {
 // Finding correct answer and keeping score was inspired by the  Love Maths project.
 function correctAnswerHandler() {
     const oldScoreElement = document.getElementById("game-score");
-    console.log(oldScoreElement)
+    console.log(oldScoreElement);
     oldScoreElement.innerHTML = +oldScoreElement.innerText + 1;
 }
 // This function is used to give a small delay after you click the answer buttons in order to reset their colors after R/W answers.
@@ -325,7 +325,7 @@ for (let answerButton of answerButtons) {
         showQuestion(currentQuestion);
         answerButton.style.backgroundColor = '';
         showPopup();
-    })
+    });
 }
 /*
 The popup fetches the final score and displays it in a window.
@@ -336,7 +336,7 @@ function showPopup() {
     const popupElement = document.getElementById('popup');
     const finalScore = document.getElementById('final-score');
     if (currentQuestionIndex === myQuestions.length - 1 || timer < 1) {
-        popupElement.style.display = "block"
+        popupElement.style.display = "block";
         finalScore.innerText = document.getElementById("game-score").innerText;
     }
 }
@@ -352,7 +352,7 @@ function sendEmail() {
     const finalScore = document.getElementById("game-score").innerText;
     const emailAdress = document.getElementById("email-adress").value;
     const playerName = document.getElementById("playerName").value;
-    if (emailAdress !== "" & playerName !== "") {
+    if (emailAdress !== "" && playerName !== "") {
         emailjs.send("service_qkue0kz", "template_rixgjxw", {
             Subject: "Your score from the movie quiz",
             playerName: playerName,
@@ -360,7 +360,7 @@ function sendEmail() {
             From: "Game Master Jazz",
             To: " Hi, thank you for playing " + playerName + " your score is " + finalScore,
         }).then(function () {
-            alert("Thank you for submitting your score")
+            alert("Thank you for submitting your score");
             location.reload();
         }, function (error) {
             console.log('FAILED...', error);

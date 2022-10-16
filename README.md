@@ -68,10 +68,18 @@
 ---
 ### HTML
 
-- No errors when testing with official W3C HTML Validator.
+- Few errors that have been fixed with official W3C HTML Validator.
 
 ### CSS
-- No errors when testing with official W3C (Jigsaw) CSS Validator.
+
+- Recieved some typing errors that have been fixed. Validated with W3C (Jigsaw) CSS Validator.
+
+### JSHint
+
+- Received comment: "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (isCorrectAnswer, currentQuestion, answerButton, correctAnswerHandler, timeFunction, getNextQuestion, showQuestion, showPopup)". 
+  - They are all working as intended though. 
+
+- There are 4 undefined variables: minutes, seconds, Promise, emailjs - but their functions work properly. 
 
 ### Accessibility
 - Confirmed that fonts and colors are readable and site is accessisble through Lighthouse in DevTools. 

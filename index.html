@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header id="header" class="heading">Coolest Movie-Quiz Ever</h1></header>
+    <header id="header" class="heading"><h1>Coolest Movie-Quiz Ever</h1></header>
    <!--  The whole game area that includes all relevant elements to the game   -->
     <div class="full-game-area">
         <!--  This is where the questions are generated   -->
@@ -45,7 +45,7 @@
     </div>
     <!--  The end-of-game popup that has a form built in    -->
     <div id="popup">
-        <form action="" id="form" method="post" name="form">
+        <form action="#" id="form" method="post" name="form">
             <h2>Submit Your Score!</h2>
             <hr>
             <!--  Shows the players final score      -->
@@ -54,9 +54,9 @@
                 <p>0</p>
             </div>
             <!--  Name and Email Field + Submit button      -->
-            <input id="playerName" name="player-name" placeholder="Name" type="text" />
+            <input id="playerName" name="player-name" placeholder="Name" type="text" required>
             <br>
-            <input id="email-adress" name="email-adress" placeholder="Email" type="text" />
+            <input id="email-adress" type="email" name="email-adress" placeholder="something@gmail.com" minlength="10" maxlength="40"required>
             <button class="submit-button" id="submit" type="button">Submit</button>
         </form>
     </div>
@@ -70,13 +70,12 @@
         </div>
 <!--  Footer      -->
     <footer class="page-footer">@the photos on this page are stock/images licensed for creative use.</footer>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
         (function () {
             emailjs.init('UWAWEmoF096jTsSFm');
         })();
     </script>
     <script src="./assets/js/script.js"></script>
 </body>
-
 </html>
