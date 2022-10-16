@@ -81,18 +81,23 @@
 
 - There are 4 undefined variables: minutes, seconds, Promise, emailjs - but their functions work properly. 
 
+- No console errors are triggering.
+
 ### Accessibility
 - Confirmed that fonts and colors are readable and site is accessisble through Lighthouse in DevTools. 
 
-<img> ![An image showing the scores of 100 in accessibility and SEO, 96 in performance and 93 in best practices in the Lighthouse Tool in DevTools.](assets/images/lighthouse2.png)
+<img> ![An image showing the scores of 96 in accessibility and a score of 100 in performance, best practices and SEO in the Lighthouse Tool in DevTools.](assets/images/lighthouse-scores.png)
 
 ### Unfixed Bugs
 
-- Due to the height of the sticky menu, the links in the navbar are actually linked a few rows above the section. 
-  - This also means that when you click The Peptalk in the sticky-menu, you wont be able to see the header unless you scroll. 
-  - This could have been solved by giving the Peptalk section-header more height, but I felt like there would be too many colors, and too much space between. 
+- The e-mail validation is not working properly. If fields are empty the alert is triggered, however inserting anything in both fields submits successfully.
+  - This is strange because in the HTML, type=email and it also has a required input. 
+  - In the email-function in JS there is also a if statement: if (emailAdress !== "" && playerName !== "") ... it should return an error. 
+  - I attempted doing some damage control as things stand by adding minlength and maxlength so players wouldn't just add random inputs leave the site, however, this is also not working. 
 
-- To make the logo be on it's own row using CSS Grid, I gave the block a width of 100%. Visually this has no implications, however you are able to click the "invisible" index.html link to the right and left of it. 
+- The timer actually starts at waits 1 second without "moving", then goes to 00:00 - then goes up to 01.00 before counting down, which means players actually get about 63 seconds to play the game. 
+
+- As things stand now, the timer doesen't end the game at all. This broke when fixing something else, and I haven't been able to restore it, afraid to break something else. 
 
 ## Deployment
 
