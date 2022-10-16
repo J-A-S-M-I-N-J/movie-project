@@ -38,7 +38,7 @@ const myQuestions = [{
             c: "The Vampire-Hunter"
         },
         correctAnswer: "a",
-        image: "../assets/images/img-question-0.jpeg",
+        image: "./assets/images/img-question-0.jpeg",
     },
     {
         question: "How many rings of power were made for the Elves in LOTR?", // 1 //
@@ -48,7 +48,7 @@ const myQuestions = [{
             c: "Nine"
         },
         correctAnswer: "a",
-        image: "../assets/images/img-question-1.jpeg",
+        image: "./assets/images/img-question-1.jpeg",
     },
     {
         question: "Which 1976 movie with Robert DeNiro has the iconic 'You talkin to me?' line?", // 2 //
@@ -58,7 +58,7 @@ const myQuestions = [{
             c: "Taxi Driver"
         },
         correctAnswer: "c",
-        image: "../assets/images/img-question-2.jpeg",
+        image: "./assets/images/img-question-2.jpeg",
     },
     {
         question: "Three Billboards Outside Ebbing, Missouri won how many Oscars in 2017?", // 3 //
@@ -68,7 +68,7 @@ const myQuestions = [{
             c: "3"
         },
         correctAnswer: "b",
-        image: "../assets/images/img-question-3.jpeg",
+        image: "./assets/images/img-question-3.jpeg",
     },
     {
         question: "What famous beach does White Man Cant Jump play out in?", // 4 //
@@ -78,7 +78,7 @@ const myQuestions = [{
             c: "Miami Beach"
         },
         correctAnswer: "b",
-        image: "../assets/images/img-question-4.jpeg",
+        image: "./assets/images/img-question-4.jpeg",
     },
     {
         question: "The movie Green Book is based on a travel guide for African Americans during the 1900's - how many states does it cover?", // 5 //
@@ -88,7 +88,7 @@ const myQuestions = [{
             c: "45"
         },
         correctAnswer: "b",
-        image: "../assets/images/img-question-5.jpeg",
+        image: "./assets/images/img-question-5.jpeg",
     },
     {
         question: "Who wrote and directed the horror/thriller-movie: Get Out?", // 6 //
@@ -98,7 +98,7 @@ const myQuestions = [{
             c: "Tyler Perry"
         },
         correctAnswer: "a",
-        image: "../assets/images/img-question-6.jpeg",
+        image: "./assets/images/img-question-6.jpeg",
     },
     {
         question: "The Big Lebowski, also known as:", // 7 //
@@ -108,7 +108,7 @@ const myQuestions = [{
             c: "The Dude"
         },
         correctAnswer: "c",
-        image: "../assets/images/img-question-7.jpeg",
+        image: "./assets/images/img-question-7.jpeg",
     },
     {
         question: "Based on a Victor Hugo novel, this movie with Sasha Baron Cohen, Russell Crowe and Hugh Jackman is called what?", // 8 //
@@ -118,7 +118,7 @@ const myQuestions = [{
             c: "Around The World in 80 Days"
         },
         correctAnswer: "a",
-        image: "../assets/images/img-question-8.jpeg",
+        image: "./assets/images/img-question-8.jpeg",
     },
     {
         question: "What's the name of this figure?", // 9 //
@@ -128,7 +128,7 @@ const myQuestions = [{
             c: "Totoro"
         },
         correctAnswer: "c",
-        image: "../assets/images/img-question-9.jpeg",
+        image: "./assets/images/img-question-9.jpeg",
     },
     {
         question: "A Royale with Cheese, is what?", // 10 //
@@ -138,7 +138,7 @@ const myQuestions = [{
             c: "A Quarter Pounder with Cheese"
         },
         correctAnswer: "c",
-        image: "../assets/images/img-question-10.jpeg",
+        image: "./assets/images/img-question-10.jpeg",
     },
     {
         question: "Finish the sentence: WHATS IN THE ?", // 11 //
@@ -148,7 +148,7 @@ const myQuestions = [{
             c: "SAUCE"
         },
         correctAnswer: "a",
-        image: "../assets/images/img-question-11.jpeg",
+        image: "./assets/images/img-question-11.jpeg",
     },
     {
         question: "In 'The Pursuit of Happyness' Will Smiths character gets 'X-mas gift of the year' What is it?", // 12 //
@@ -158,7 +158,7 @@ const myQuestions = [{
             c: "A Rubik's Cube"
         },
         correctAnswer: "c",
-        image: "../assets/images/img-question-12.jpeg",
+        image: "./assets/images/img-question-12.jpeg",
     },
     {
         question: "Who directed Pan's Labyrinth?", // 13 //
@@ -168,7 +168,7 @@ const myQuestions = [{
             c: "Benicio Del Toro"
         },
         correctAnswer: "b",
-        image: "../assets/images/img-question-13.jpeg",
+        image: "./assets/images/img-question-13.jpeg",
     },
     {
         question: "Who made the voice for the genie in the original Disney movie Aladdin?", // 14 //
@@ -178,7 +178,7 @@ const myQuestions = [{
             c: "William Roberts"
         },
         correctAnswer: "b",
-        image: "../assets/images/img-question-14.jpeg",
+        image: "./assets/images/img-question-14.jpeg",
     },
     {
         question: "Who plays the young goth girl in the movie Beetlejuice from 1988?", // 15 //
@@ -188,7 +188,7 @@ const myQuestions = [{
             c: "Winona Ryder"
         },
         correctAnswer: "c",
-        image: "../assets/images/img-question-15.jpeg",
+        image: "./assets/images/img-question-15.jpeg",
     },
     {
         question: "What's the name of the evil sorceress in the West African-animation Kirikou?", // 16 //
@@ -198,7 +198,7 @@ const myQuestions = [{
             c: "Karaba"
         },
         correctAnswer: "c",
-        image: "../assets/images/img-question-16.jpeg",
+        image: "./assets/images/img-question-16.jpeg",
     },
     {
         question: "In Coming to America, what was Prince Hakeem's home country/land called?", // 17 //
@@ -208,7 +208,7 @@ const myQuestions = [{
             c: "Atlanta"
         },
         correctAnswer: "b",
-        image: "../assets/images/img-question-17.jpeg",
+        image: "./assets/images/img-question-17.jpeg",
     },
     {
         question: "Michael J Fox plays con-artist that can see and speak to the dead and is haunted by the grim reaper.", // 18 //
@@ -218,7 +218,7 @@ const myQuestions = [{
             c: "The Frighteners"
         },
         correctAnswer: "c",
-        image: "../assets/images/img-question-18.jpeg",
+        image: "./assets/images/img-question-18.jpeg",
     },
     {
         question: "Bill Murray stars in the classic movie Groundhog day. Do you remember what day he always seems to repeat?", // 19 //
@@ -228,7 +228,7 @@ const myQuestions = [{
             c: "Friday"
         },
         correctAnswer: "b",
-        image: "../assets/images/img-question-19.jpeg",
+        image: "./assets/images/img-question-19.jpeg",
     },
     {
         question: "What position did Harry Potter play at Quidditch?", // 20 //
@@ -238,7 +238,7 @@ const myQuestions = [{
             c: "Searcher"
         },
         correctAnswer: "a",
-        image: "../assets/images/img-question-20.jpeg",
+        image: "./assets/images/img-question-20.jpeg",
     },
     {
         question: "GAME OVER", // 21 //
@@ -248,7 +248,7 @@ const myQuestions = [{
             c: "Searcher"
         },
         correctAnswer: "a",
-        image: "../assets/images/img-question-21.jpeg",
+        image: "./assets/images/img-question-21.jpeg",
     },
 ];
 

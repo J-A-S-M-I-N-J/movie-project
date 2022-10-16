@@ -1,6 +1,6 @@
-# The Coolest Movie Quiz
+# Coolest Movie Quiz
 
-- **The Coolest Movie Quiz** is an interactive quiz-game that lets the player answer questions about 20 movies (or until timer runs out). They are presented with a relating image for each question, and have the possbility of choosing one out of three answers. The pace of the game is very high, since your running against the clock, and the player is presented with new questions as soon as a button is pressed. 
+- **Coolest Movie Quiz** is an interactive quiz-game that lets the player answer questions about 20 movies (or until timer runs out). They are presented with a relating image for each question, and have the possbility of choosing one out of three answers. The pace of the game is very high, since your running against the clock, and the player is presented with new questions as soon as a button is pressed. 
 - The goal of this movie quiz is of course, to have fun and collect points. However, I wanted to present a real challenge, because most movie-quizes out there are quite easy.
   - The quiz covers many different genres, from comedy, to horror, fantasy classics and some "cult-classics" as well. 
   - The questions are structured in a way that is unpredictable. Sometimes short statements are questions, other times text is quite long, and occasionally it's more related to movie success like the Oscars rather than about the movie itself. 
@@ -42,10 +42,12 @@
   - Tested if all answers were correct. 
   - Tested if there was a way to cheat the input form. 
   - Also tested rushing the game and spam-clicking buttons. 
-    - During the development process, I did this a few times and it returned an error, I planned on finding it to add as a screen shot but it was something which I couldn't replicate again.
+    - During the development process, I did this a few times and it returned an error, I planned on finding it to add as a screen shot but it was something I couldn't replicate again.
 - Confirmed that the site is responsive and works on all different screensizes ranging from 320 pixels to 1200 pixels and above. This includes the pop-up. 
 - Confirmed that text is readable, buttons usable, and images are visible. 
 - Confirmed that the form works, and triggers the correct alert. 
+
+<img> ![Image of page on different screen-size](assets/images/e-mail-submission.png)
 
 ## Bugs
 ---
@@ -99,6 +101,14 @@
 
 - As things stand now, the timer doesen't end the game at all. This broke when fixing something else, and I haven't been able to restore it, afraid to break something else. 
 
+- There is a minor inconvenience at the start of the game: About half of the times on Safari / Chrome the alert triggers before the page has been loaded in the back. 
+  - The idea is that while you read the alert, and recieve further instructions to look at the bottom (to read rules), it actually wont load fast enough. 
+  - Players then have to press OK - start the game, read the rules at the bottom, and then refresh page to get back the time lost. This solution is presented in the alert. 
+  - FireFox does not have this issue. 
+
+- Not really a bug, more of a disclaimer: I intended to use real snapshots / images for many of the movies, however I do not have rights for any good ones. 
+  - All photos used are licensed for "creative" use, however many photos are of lower quality and not being able to find the right sizes has impacted the overall style. 
+
 ## Deployment
 
 - The Site was deployed to the GitHub pages. The steps to deploy are as follows:
@@ -106,43 +116,35 @@
   - From the source section drop-down menu, select the Main branch. 
   - Once the main branch has been selected, the page provided the link to the completed website. 
   
-- The live link could be found here: [The Workout Plan](https://j-a-s-m-i-n-j.github.io/the-workout-plan/).
+- The live link could be found here: [Coolest Movie Quiz](https://j-a-s-m-i-n-j.github.io/the-workout-plan/).
 
 ## Credits
 ---
 ### Content
 
-- For the footer I was inspired by the code that we used for the [Love Running](https://github.com/J-A-S-M-I-N-J/Love-Running-Walkthrough-Jasmin) project.
-
-- The Form from [Love Running](https://github.com/J-A-S-M-I-N-J/Love-Running-Walkthrough-Jasmin) was used as a base and later edited. 
+- During Love Math we got to learned how to increment for keeping scores and check answers.
+- [Love Math](https://j-a-s-m-i-n-j.github.io/love-maths-jasmin/)
 
 ### Guides & Troubleshooting
 
-### CSS Grid
-- [W3Schools](https://www.w3schools.com/css/css_rwd_grid.asp) 
+### Promise, Resolve, Async, Await
+- [Geeksforgeeks](https://www.geeksforgeeks.org/how-to-delay-a-loop-in-javascript-using-async-await-with-promise/) 
 
-### Flexbox
+### EmailJS
 
-- [Youtube](https://www.youtube.com/watch?v=9e-lWQdO-DA) 
-- [CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) 
-- [W3Schools](https://www.w3schools.com/css/css3_flexbox_container.asp) 
+- [EmailJS](https://www.emailjs.com/) 
+
+### Window.Onload  
+
+- [Geeksforgeeks](https://www.geeksforgeeks.org/how-to-run-a-function-when-the-page-is-loaded-in-javascript/)
+- [Stack Overflow](https://stackoverflow.com/questions/5721704/window-location-reload-with-clear-cache)
+
+### Hiding & Styling a Popup
+
+- [Formget](https://www.formget.com/how-to-create-pop-up-contact-form-using-javascript/)
+
+### Template for Array
+
+- [Simplestepcode](https://simplestepscode.com/javascript-quiz-tutorial/#step2)
 
 
-### Sticky Header
-
-- [Stack Overflow](https://stackoverflow.com/questions/55739582/how-to-create-a-fixed-sticky-header-on-scroll-with-html-and-css-only)
-- [Codepen](https://codepen.io/phajek/pen/BbeqLG)
-- [CSS Deck](https://cssdeck.com/blog/how-to-make-a-sticky-header-step-by-step/) 
-
-### Media Queries  
-
-- [W3Schools](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
-
-## Media
-
-- Videos in the Guide section are from Youtube.
-- In the same order as the web-page (top to bottom).
-- [Youtube](https://www.youtube.com/embed/wTToRXhF6RU)
-- [Youtube](https://www.youtube.com/embed/0Q8fETMjWqQ)
-- [Youtube](https://www.youtube.com/embed/xdRtqKr8yKI)
-- [Youtube](https://www.youtube.com/embed/3upx6bSFTSE)
