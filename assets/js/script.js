@@ -38,7 +38,7 @@ const myQuestions = [{
             c: "The Vampire-Hunter"
         },
         correctAnswer: "a",
-        image: "/assets/images/img-question-0.jpeg",
+        image: "./assets/images/img-question-0.jpeg",
     },
     {
         question: "How many rings of power were made for the Elves in LOTR?", // 1 //
@@ -48,7 +48,7 @@ const myQuestions = [{
             c: "Nine"
         },
         correctAnswer: "a",
-        image: "assets/images/img-question-1.jpeg",
+        image: "./assets/images/img-question-1.jpeg",
     },
     {
         question: "Which 1976 movie with Robert DeNiro has the iconic 'You talkin to me?' line?", // 2 //
@@ -58,7 +58,7 @@ const myQuestions = [{
             c: "Taxi Driver"
         },
         correctAnswer: "c",
-        image: "../images/img-question-2.jpeg",
+        image: "./assets/images/img-question-2.jpeg",
     },
     {
         question: "Three Billboards Outside Ebbing, Missouri won how many Oscars in 2017?", // 3 //
